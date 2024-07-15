@@ -1,9 +1,10 @@
-const consAPI = document.querySelector(`consumir-api`)
+const listaPokemon = document.querySelector(`listaPokemon`);
+const URL = `https://pokeapi.co/api/v2/pokemon/`;
 
-const callApi = () =>{
-    fetch(`https://pokeapi.co/api/v2/pokemon/ditto`)
-  .then(res => res.json())
-  .then(data =>{console.log(JSON.stringify(data))})
+for (let i = 1; 1 <= 151; i++){
+  fetch(URL + i).then(res => res.json()).then(data => con(data))
 }
 
-consAPI.addEventListener("click", callApi)
+function mostrarPkm(data){
+
+}
