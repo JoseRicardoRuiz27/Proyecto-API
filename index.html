@@ -21,10 +21,10 @@
             </div>            
         </div>
         <div class="controls">
-            <div class="button-group">
-                <button class="button" onclick="getNewPokemon()">Next Pokémon</button>
-            </div>
-        </div>
+            <button onclick="getNewPokemon()">Next Pokémon</button>
+            <input type="number" id="pokemon-id-input" placeholder="Enter Pokémon ID" min="1" max="151">
+            <button onclick="searchPokemonById()">Go</button>
+        </div>        
     </div>
 </body>
 </html>

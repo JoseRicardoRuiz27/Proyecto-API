@@ -82,29 +82,20 @@ body {
 
 .controls {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-.button-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
+#pokemon-id-input {
+    width: 100px;
+    padding: 5px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
-.button:hover {
-    background-color: #45a049;
-}
+
 .pokemon-types {
     display: flex;
     justify-content: center;

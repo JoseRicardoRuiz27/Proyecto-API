@@ -46,3 +46,16 @@ function getNewPokemon() {
     }
     fetchPokemon(currentPokemonId); // Carga el siguiente Pokémon
 }
+
+// Función para buscar Pokémon por ID
+function searchPokemonById() {
+    const inputElement = document.getElementById('pokemon-id-input');
+    const pokemonId = parseInt(inputElement.value);
+
+    if (pokemonId >= 1 && pokemonId <= 151) {
+        fetchPokemon(pokemonId);
+        currentPokemonId = pokemonId; // Actualizamos el ID actual para sincronizar
+    } else {
+        alert('Por favor, introduce un número entre 1 y 151.');
+    }
+}
