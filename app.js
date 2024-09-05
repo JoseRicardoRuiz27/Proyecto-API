@@ -14,13 +14,24 @@ function fetchPokemon(pokemonId) {
             const pokemonImage = data.sprites.front_default;
             const pokemonDescription = `ID: ${data.id}`;
 
-            // Obtener tipos del Pokémon
-            const pokemonTypes = data.types.map(typeInfo => typeInfo.type.name).join(', ');
-
             // Actualizar la pantalla de la pokedex
             document.querySelector(".pokemon-name").textContent = pokemonName;
             document.getElementById("pokemon-img").src = pokemonImage;
-            document.getElementById("pokemon-description").textContent = `${pokemonDescription}, Types: ${pokemonTypes}`;
+
+            // Limpiar tipos anteriores
+            const typesContainer = document.getElementById('pokemon-types');
+            typesContainer.innerHTML = ''; // Limpiamos el contenido anterior
+
+            // Crear elementos para cada tipo y agregarlos al contenedor
+            data.types.forEach(typeInfo => {
+                const typeName = typeInfo.type.name;
+                
+                const typeElement = document.createElement('div');
+                typeElement.classList.add('pokemon-type', typeName); // Añadir clase para tipo
+                typeElement.textContent = typeName;
+
+                typesContainer.appendChild(typeElement);
+            });
         })
         .catch(error => {
             console.error('Error fetching Pokémon:', error);

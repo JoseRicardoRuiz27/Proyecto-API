@@ -105,3 +105,73 @@ body {
 .button:hover {
     background-color: #45a049;
 }
+.pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.pokemon-type {
+    padding: 5px 10px;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pokemon-type.grass {
+    background-color: green;
+    border: 1px solid white;
+}
+
+.pokemon-type.poison {
+    background-color: violet;
+    border: 1px solid white;
+}
+.pokemon-type.fire {
+    background-color: red;
+}
+.pokemon-type.water {
+    background-color: blue;
+}
+.pokemon-type.bug{
+    background-color: brown;
+}
+.pokemon-type.flying {
+    background-color: #75d0f7;
+}
+.pokemon-type.normal {
+    background-color: gray;
+}
+.pokemon-type.electric {
+    background-color: yellow;
+}
+.pokemon-type.ground {
+    background-color: orange;
+}
+.pokemon-type.fairy {
+    background-color: pink; 
+}
+.pokemon-type.fighting {
+    background-color: rgb(128, 60, 0);
+}
+.pokemon-type.psychic {
+    background-color: rgb(221, 0, 255);
+}
+.pokemon-type.rock {
+    background-color: rgb(182, 118, 8);
+}
+.pokemon-type.ghost {
+    background-color: rgb(195, 0, 255);
+}
+.pokemon-type.steel {
+    background-color: rgb(119, 119, 142);
+}
+.pokemon-type.ice {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.pokemon-type.dragon {
+    background-color: rgb(85, 0, 255);
+}
